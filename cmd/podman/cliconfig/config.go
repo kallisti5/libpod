@@ -554,12 +554,38 @@ type VersionValues struct {
 	Format string
 }
 
+type SecretCreateValues struct {
+	PodmanCommand
+	Driver string
+	Label  []string
+}
+
+type SecretInspectValues struct {
+    PodmanCommand
+    All    bool
+    Format string
+}
+
+type SecretLsValues struct {
+    PodmanCommand
+    Filter string
+    Format string
+    Quiet  bool
+}
+
+type SecretRmValues struct {
+    PodmanCommand
+    All   bool
+    Force bool
+}
+
 type VolumeCreateValues struct {
 	PodmanCommand
 	Driver string
 	Label  []string
 	Opt    []string
 }
+
 type VolumeInspectValues struct {
 	PodmanCommand
 	All    bool
